@@ -1,0 +1,31 @@
+import javax.swing.*;
+public class Atividade09 {
+	public static void main (String args []) {
+            Object[] op = {"Hatch, Sedans, Motocicletas e Caminhonetes"};
+		    String modelo = (String) JOptionPane.showInputDialog("Forneça o nome do modelo que você deseja: ");
+		    if (modelo != null) {
+			switch (modelo) {
+				case "Hatch":
+					modelo = "Compra efetuada com sucesso";
+					break;
+
+				case "Sedans":
+					modelo = "Tem certeza que é este modelo que deseja?";
+					break;
+
+				case "Motocicletas":
+					modelo = "Tem certeza que é este modelo que deseja?";
+					break;
+
+				case "Caminhonetes":
+					modelo = "Tem certeza que é este modelo que deseja?";
+					break;
+
+                default:
+					modelo = "Não trabalhamos com este tipo de automóvel aqui!";
+			}
+			JOptionPane.showMessageDialog(null, modelo);
+		}
+		System.exit(0);
+	}
+}
