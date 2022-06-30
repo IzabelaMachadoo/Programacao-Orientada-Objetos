@@ -1,0 +1,40 @@
+import javax.swing.JOptionPane;
+
+
+public class MetodosSemRetorno {
+    public static void main (String args []) {
+        String aux;
+        int num1, num2;
+ 
+        aux = JOptionPane.showInputDialog("Entre com o 1 numero: ");
+        num1 = Integer.parseInt(aux);
+
+        aux = JOptionPane.showInputDialog("Entre com o 2 numero: ");
+        num2 = Integer.parseInt(aux);
+
+        somar(num1, num2);
+        sub(num1, num2);
+        divi(num1, num2);
+        mult(num1, num2);
+    }
+    public static void somar(int num1, int num2) {
+        int resultado;
+        resultado = num1 + num2;
+        JOptionPane.showMessageDialog(null,"Resultado da soma: " + resultado);
+    }
+        public static void sub(int num1, int num2) {
+        int resultado;
+        resultado = num1 - num2;
+        JOptionPane.showMessageDialog(null,"Resultado da subtração: " + resultado);
+    }
+        public static void divi(int num1, int num2) {
+        int resultado;
+        resultado = num1 / num2;
+        JOptionPane.showMessageDialog(null,"Resultado da divisão: " + resultado);
+    }
+        public static void mult(int num1, int num2) {
+        int resultado;
+        resultado = num1 * num2;
+        JOptionPane.showMessageDialog(null,"Resultado da multiplicação: " + resultado);
+    }
+}
