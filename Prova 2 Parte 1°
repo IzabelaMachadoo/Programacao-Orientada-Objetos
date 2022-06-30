@@ -1,0 +1,43 @@
+// Izabela Machado 3-Tecnico em Informatica 05/05/22
+
+import javax.swing.*;
+public class Prova02 {
+  public static void main(String args[]) {
+      String aux;
+      Float salario, total, aumento;
+      try {
+          aux = JOptionPane.showInputDialog("Insira o valor do seu salário ");
+          salario = Float.parseFloat(aux);
+         
+          if(salario < 1499){
+              aumento = (salario * 15) /100 ;
+              total = salario + aumento;
+              JOptionPane.showMessageDialog(null,"\nSalário : " + salario + "\nPercentual de aumento: 15%" +  "\nValor do aumento:" + aumento +  "\nValor do salário com aumento:" + total);
+
+          } else if(salario >= 1500 && salario < 1750){
+              aumento = (salario * 12) /100 ;
+              total = salario + aumento;
+              JOptionPane.showMessageDialog(null,"\nValor do salário : " + salario + "\nPercentual de aumento: 12%" +  "\nValor do aumento:" + aumento + "\nValor do salário com aumento:" + total);
+
+          } else if (salario >= 1750 && salario < 2000){
+              aumento = (salario * 10) /100 ;
+              total = salario + aumento;
+              JOptionPane.showMessageDialog(null,"\nValor do salário : " + salario + "\nPercentual de aumento: 10%" +  "\nValor do aumento:" + aumento +  "\nValor do salário com aumento:" + total);
+
+          } else if (salario >= 2000 && salario < 3000){
+              aumento = (salario * 7) /100 ;
+              total = salario + aumento;
+              JOptionPane.showMessageDialog(null,"\nValor do salário : " + salario + "\nPercentual de aumento: 7%" + "\nValor do aumento:" + aumento +  "\nValor do salário com aumento:" + total);
+
+          } else if (salario >= 3000){
+              aumento = (salario * 5) /100 ;
+              total = salario + aumento;
+              JOptionPane.showMessageDialog(null,"\nValor do salário : " + salario + "\nPercentual de aumento: 5%" +  "\nValor do aumento:" + aumento + "\nValor do salário com aumento:" + total);
+          }
+      } catch (NumberFormatException erro) {
+          JOptionPane.showMessageDialog(null,"Houve erro na conversão, digite apenas caracteres numéricos"
+              + erro.toString());
+      }
+      System.exit(0);
+  }
+}
