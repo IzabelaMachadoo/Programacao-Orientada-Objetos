@@ -1,0 +1,31 @@
+import javax.swing.JOptionPane;
+
+public class exercicio06 {
+	public static void main(String args[]) {
+		String aux;
+		float prova01, prova02, notadotrabalho, media;
+		try {
+			aux = JOptionPane.showInputDialog("Prova 01");
+			prova01 = Float.parseFloat(aux);
+			
+			aux = JOptionPane.showInputDialog("Prova 02");
+			prova02 = Float.parseFloat(aux);
+			
+            aux = JOptionPane.showInputDialog("Nota do trabalho");
+			notadotrabalho = Float.parseFloat(aux);
+            
+            media = (prova01 + prova02 + notadotrabalho) /3;
+
+			if(media >=60){
+				JOptionPane.showMessageDialog(null,"Você foi aprovado. A média final foi: " +  media);
+			}else{
+				JOptionPane.showMessageDialog(null,"Você foi reprovado. A média final foi: " + media);
+			}
+	
+		} catch (NumberFormatException erro) {
+			JOptionPane.showMessageDialog(null,"Houve erro na conversão, digite apenas caracteres numéricos" 
+				+ erro.toString());
+		 } 
+		System.exit(0);
+	}
+}
