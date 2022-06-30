@@ -1,0 +1,14 @@
+public class OperadoresAritmeticos {
+    public static void main(String args []) {
+		//declaração e inicialização de variáveis 
+		int x = 12;
+		int y = 2;
+		//várias operações com as variáveis 
+		System.out.println("X = " + x);
+		System.out.println("Y = " + y);
+		System.out.println("Soma = " + (x + y));
+		System.out.println("Subtração = " + (x - y));
+		System.out.println("Multiplicação = " + (x * y));
+		System.out.println("Divisão = " + (x/y));
+    }
+}
