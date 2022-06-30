@@ -1,0 +1,63 @@
+import javax.swing.*;
+ 
+public class Atividade8 {
+    public static void main(String args[]){
+        String aux;
+        int r1, r2, r3, r4, re, maior, menor;
+
+        
+
+        try{
+            aux = JOptionPane.showInputDialog("Qual o valor da resistencia 1?");
+            r1 = Integer.parseInt(aux);
+ 
+            aux = JOptionPane.showInputDialog("Qual o valor da resistencia 2?");
+            r2 = Integer.parseInt(aux);
+ 
+            aux = JOptionPane.showInputDialog("Qual o valor da resistencia 3?");
+            r3 = Integer.parseInt(aux);
+ 
+            aux = JOptionPane.showInputDialog("Qual o valor da resistencia 4?");
+            r4 = Integer.parseInt(aux);
+
+            maior = r1;
+            menor = r1;
+            re = (r1 + r2 + r3 + r4);
+ 
+            if(r1 > r2 && r1 > r3 && r1 > r4 ){
+                maior = r1;
+              
+            }else if(r2 > r1 && r2 > r3 && r2 > r4){
+                maior = r2;
+                
+            }else if(r3 > r1 && r3 > r2 && r3 > r4){
+                maior = r3;
+                
+            }else if(r4 > r1 && r4 > r2 && r4 > r3){
+                maior = r4;
+                
+            }
+            
+            if(r1 < r2 && r1 < r3 && r1 < r4){
+                menor = r1;
+              
+            }else if(r2 < r1 && r2 < r3 && r2 < r4){
+                menor = r2;
+              
+            }else if(r3 < r1 && r3 < r2 && r3 < r4){
+                menor = r3;
+              
+            }else if(r4 < r1 && r4 < r2 && r4 < r3){
+                menor = r4;
+            }
+
+            JOptionPane.showMessageDialog(null,"Resistencias fornecidas: \n" + "\n" + 
+            "Resistencia 1: " + r1 + "\nResistencia 2: " + r2 + "\nResistencia 3: " + r3 + "\nResistencia 4: " + r4  + 
+            "\nResistencia equivalente: " + re + "\nResistencia maior: " + maior + "\nResistencia menor: " + menor);
+        } catch (NumberFormatException erro) {
+           JOptionPane.showMessageDialog(null,"Houve erro na conversão, digite apenas caracteres numéricos"
+               + erro.toString());
+       }
+       System.exit(0);
+    }
+}
