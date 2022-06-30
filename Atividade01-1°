@@ -1,0 +1,12 @@
+//Classe impressão de texto: Atividade1.java
+//Imprimindo uma linha de texto com multiplas instruções
+ 
+//Declarando a classe, nome relacionado com o que o programa vai fazer, primeira letra maiuscula de cada palavra
+public class Atividade01
+{  
+    //método main inicia a execução do Java, public serve para q as classe chamadas possam vir
+   public static void main(String[] args)
+   {
+       System.out.println("Primeira atividade de:\nProgramação Orientada a Objetos\nAluno: Izabela Machado");
+   }//fim do método main
+}//fim da classe Atividade1
