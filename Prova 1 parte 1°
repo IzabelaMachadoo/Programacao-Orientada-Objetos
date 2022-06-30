@@ -1,0 +1,31 @@
+// Izabela Machado 3-Tecnico em Informatica 05/05/22
+
+
+import javax.swing.*;
+ 
+public class Prova01{
+   public static void main(String args[]) {
+       String aux;
+       Float salario, salario_final, desconto, total_limite;
+
+       try {
+           aux = JOptionPane.showInputDialog("Digite o salario por favor:");
+           salario = Float.parseFloat(aux);
+           
+           salario_final = salario - ((salario*11)/100);
+           desconto = (salario*11)/100;
+           total_limite = salario - 318;
+
+           if(desconto < 318){
+               JOptionPane.showMessageDialog(null,"Salário : " + salario + "\nO valor total: " + salario_final + "\nDesconto:" + desconto);
+           }else{
+               JOptionPane.showMessageDialog(null,"Salário : " + salario + "\nO valor total: " + total_limite + "\nDesconto: 318,00");
+           }
+        
+       } catch (NumberFormatException erro) {
+           JOptionPane.showMessageDialog(null,"Houve erro na conversão, digite apenas caracteres numéricos"
+               + erro.toString());
+       }
+       System.exit(0);
+   }
+}
