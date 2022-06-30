@@ -1,0 +1,22 @@
+import javax.swing.*;
+ 
+public class atividade02 {
+   public static void main(String args []){
+       int idade = 0, contador_pessoas = 1, mais18=0;
+  
+       while(contador_pessoas < 11){
+            idade = Integer.parseInt( JOptionPane.showInputDialog("Informe a sua idade?  "));
+        
+            contador_pessoas++;
+            if(idade >=18){
+                mais18++;
+
+           } 
+       }
+       JOptionPane.showMessageDialog(null, "O total de pessoas maiores de +18 anos" +mais18);
+ 
+       System.exit(0);
+  
+   }
+ 
+}
