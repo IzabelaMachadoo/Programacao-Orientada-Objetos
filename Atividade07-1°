@@ -1,0 +1,35 @@
+import javax.swing.JOptionPane;
+
+public class exercicio07 {
+    public static void main(String args[]) {
+		String aux, nome_produto;
+		float produto, desconto;
+        try { 
+           nome_produto = JOptionPane.showInputDialog("Qual o nome do produto? ");
+           
+           aux = JOptionPane.showInputDialog("Qual o valor do produto ? ");
+           produto = Float.parseFloat(aux);
+           
+           if(produto >= 50 && produto < 200){
+               desconto = produto - ((produto * 5) /100) ;
+               JOptionPane.showMessageDialog(null,"Nome do produto: " + nome_produto + "\nValor do produto: " + produto +"\nValor do produto com desconto: " + desconto);
+           } else if(produto >= 200 && produto < 500){
+               desconto = produto - ((produto * 6) /100) ;
+               JOptionPane.showMessageDialog(null,"Nome do produto: " + nome_produto + "\nValor do produto: " + produto +"\nValor do produto com desconto: " + desconto);
+           } else if (produto >= 500 && produto < 1000){
+               desconto = produto - ((produto * 7) /100) ;
+               JOptionPane.showMessageDialog(null,"Nome do produto: " + nome_produto + "\nValor do produto: " + produto +"\nValor do produto com desconto: " + desconto);
+           } else if (produto >= 1000){
+               desconto = produto - ((produto * 8) /100) ;
+               JOptionPane.showMessageDialog(null,"Nome do produto: " + nome_produto + "\nValor do produto: " + produto +"\nValor do produto com desconto: " + desconto);
+           } else if (produto <= 0){
+               JOptionPane.showMessageDialog(null,"Número inválido, porfavor tente novemente");
+           }
+
+       } catch (NumberFormatException erro) {
+           JOptionPane.showMessageDialog(null,"Houve erro na conversão, digite apenas caracteres numéricos"
+               + erro.toString());
+       }
+       System.exit(0);
+   }
+}
