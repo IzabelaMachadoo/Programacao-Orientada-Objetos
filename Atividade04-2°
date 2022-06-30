@@ -1,0 +1,36 @@
+import java.text.DecimalFormat;
+import javax.swing.*;
+import java.util.*;
+import java.util.stream.*;
+import java.io.*;
+
+public class exercicio04 {
+    public static void main(String[] args) {
+        int vaga, a = 0;
+        String placaveiculo;
+        String[] estacionamento = new String[10];
+    
+        do {  
+          a = Integer.parseInt(JOptionPane.showInputDialog("MENU\n1-Entrada\n2-Saída\n3-Listar situação atual\n4-Encerrar o programa\nDigite o número correspondente a sua busca: \n"));
+          
+          switch (a) {
+               case 1:
+                   vaga = Integer.parseInt(JOptionPane.showInputDialog("Informe o número da vaga que deseja (de 1 a 10): "));
+                   if(estacionamento[vaga] == null ){
+                       placaveiculo = JOptionPane.showInputDialog("Qual a placa do seu carro? : ");
+                       estacionamento[vaga] = placaveiculo;
+                   }else {
+                       JOptionPane.showMessageDialog(null,"Essa vaga está indisponivel, porfavor tente novamente");
+                       }
+                   break;
+               case 2:
+                    vaga = Integer.parseInt(JOptionPane.showInputDialog("Informe o número da vaga que seu carro está (de 0 a 10): "));
+                    estacionamento[vaga] = null; 
+                   break;
+               case 3:
+                  JOptionPane.showMessageDialog(null, Arrays.toString(estacionamento));
+                   break;
+            } 
+        } while(a != 4);  
+    }
+}
