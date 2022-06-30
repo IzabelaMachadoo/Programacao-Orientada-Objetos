@@ -1,0 +1,22 @@
+import java.util.*;
+public class atividade03{
+    public static void main (String args[]){
+        int lider, lanterna;
+        Scanner sc;
+        try{
+            System.out.println("Entre com o lider");
+            sc = new Scanner(System.in);
+            lider = sc.nextInt();
+
+            System.out.println("Entre com a lanterna");
+            sc = new Scanner(System.in);
+            lanterna = sc.nextInt();
+
+            System.out.println("O número de vitórias vai ser" + (lider-lanterna) /3);
+        }
+            catch(NumberFormatException e){
+            System.out.println("Houve erro na conversão, digite apenas caracteres numericos");
+        }
+    
+    }
+}
